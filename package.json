@@ -9,19 +9,26 @@
     "email": "dave.des@gmail.com",
     "url": "https://github.com/mattdesl"
   },
-  "dependencies": {
-    "tone": "^0.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "browserify": "^12.0.1",
-    "budo": "^7.1.0",
+    "browserify": "^13.0.0",
+    "budo": "^8.0.2",
+    "snazzy": "^2.0.1",
+    "standard": "^5.4.1",
     "uglify-js": "^2.6.1"
   },
   "scripts": {
-    "start": "budo index.js:bundle.js --live",
+    "start": "budo index.js:bundle.js --live --open --onupdate \"standard --verbose | snazzy\"",
     "build": "browserify index.js | uglifyjs -m -c warnings=false > bundle.js"
   },
-  "keywords": ["budo","browserify","example","help","tutorial","npm"],
+  "keywords": [
+    "budo",
+    "browserify",
+    "example",
+    "help",
+    "tutorial",
+    "npm"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/mattdesl/browserify-example.git"
